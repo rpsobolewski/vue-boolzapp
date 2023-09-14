@@ -1,0 +1,31 @@
+* {
+    bottom: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+
+.container{
+    background-color: aqua;
+    height: 80vh;
+    margin-top: 80px;
+}
+[class*="col"]{
+    border: 1px solid black;
+}
+
+.io{
+    border-radius: 50%;
+    aspect-ratio: 1/1;
+    width: 50px;
+}
+
+.contact{
+    border-radius: 50%;
+        aspect-ratio: 1/1;
+        width: 50px;
+        
+}
+.contacts{
+    padding-top: 5px;
+}

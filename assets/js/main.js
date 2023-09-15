@@ -9,7 +9,6 @@ createApp({
       activeContact: 0,
       contacts: [
         {
-          id: 1,
           name: "Michele",
           avatar: "_1",
           visible: true,

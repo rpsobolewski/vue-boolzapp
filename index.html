@@ -50,7 +50,7 @@
                         <div class="contact"
                             :class="index === activeContact ? 'active' : ''"
                             v-for="(contact, index) in contacts"
-                            @click="activeContact= contact.id -1">
+                            @click="activeContact= index">
                             <div class="avatar">
                                 <img
                                     :src="`./assets/img/avatar${contact.avatar}.jpg`"

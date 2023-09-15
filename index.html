@@ -49,7 +49,8 @@
                     <div class="contacts">
                         <div class="contact"
                             :class="index === activeContact ? 'active' : ''"
-                            v-for="(contact, index) in contacts">
+                            v-for="(contact, index) in contacts"
+                            @click="activeContact= contact.id -1">
                             <div class="avatar">
                                 <img
                                     :src="`./assets/img/avatar${contact.avatar}.jpg`"
@@ -85,7 +86,7 @@
                     <!-- /.active_contact -->
                     <div class="messages">
                         <div :class="message.status"
-                            v-for="message in contacts[0].messages">
+                            v-for="message in contacts[activeContact].messages">
                             {{ message.message }}
                         </div>
 

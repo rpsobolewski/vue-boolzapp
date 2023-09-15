@@ -84,7 +84,7 @@
                     </div>
                     <!-- /.active_contact -->
                     <div class="messages">
-                        <div class="sent"
+                        <div :class="message.status"
                             v-for="message in contacts[0].messages">
                             {{ message.message }}
                         </div>

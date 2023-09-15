@@ -1,18 +1,17 @@
-/* Iniziamo a lavorare alla nostra replica della nota app di messaggistica. L'esercitazione sará divisa in piú giornate, oggi iniziamo a lavorare alla prima milestone che vi
-riporto di seguito:
-Milestone 1
-Replica della grafica con la possibilità di avere messaggi scritti dall'utente (verdi) e dall'interlocutore (bianco) assegnando due classi CSS diverse
-Visualizzazione dinamica della lista contatti: tramite la direttiva v-for, visualizzare nome e immagine di ogni contatto */
-
 const { createApp } = Vue;
-
 createApp({
   data() {
     return {
+      me: {
+        avatar: "_io",
+        name: "Sofia",
+      },
+      activeContact: 0,
       contacts: [
         {
+          id: 1,
           name: "Michele",
-          avatar: "./assets/img/avatar_1.jpg",
+          avatar: "_1",
           visible: true,
           messages: [
             {
@@ -34,7 +33,7 @@ createApp({
         },
         {
           name: "Fabio",
-          avatar: "./assets/img/avatar_2.jpg",
+          avatar: "_2",
           visible: true,
           messages: [
             {
@@ -56,7 +55,7 @@ createApp({
         },
         {
           name: "Samuele",
-          avatar: "./assets/img/avatar_3.jpg",
+          avatar: "_3",
           visible: true,
           messages: [
             {
@@ -78,7 +77,7 @@ createApp({
         },
         {
           name: "Alessandro B.",
-          avatar: "./assets/img/avatar_4.jpg",
+          avatar: "_4",
           visible: true,
           messages: [
             {
@@ -95,7 +94,7 @@ createApp({
         },
         {
           name: "Alessandro L.",
-          avatar: "./assets/img/avatar_5.jpg",
+          avatar: "_5",
           visible: true,
           messages: [
             {
@@ -112,7 +111,7 @@ createApp({
         },
         {
           name: "Claudia",
-          avatar: "./assets/img/avatar_5.jpg",
+          avatar: "_6",
           visible: true,
           messages: [
             {
@@ -134,7 +133,7 @@ createApp({
         },
         {
           name: "Federico",
-          avatar: "./assets/img/avatar_7.jpg",
+          avatar: "_7",
           visible: true,
           messages: [
             {
@@ -151,7 +150,7 @@ createApp({
         },
         {
           name: "Davide",
-          avatar: "./assets/img/avatar_8.jpg",
+          avatar: "_8",
           visible: true,
           messages: [
             {
@@ -174,5 +173,4 @@ createApp({
       ],
     };
   },
-  methods: {},
 }).mount("#app");

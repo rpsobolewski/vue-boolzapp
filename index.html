@@ -88,7 +88,8 @@
                         <div :class="message.status"
                             v-for="message in contacts[activeContact].messages">
                             {{ message.message }}
-                            <span class="message-date">{{ message.date }}</span>
+                            <span class="message-date"> {{
+                                getHourAndMinute(message.date) }}</span>
                         </div>
 
                     </div>

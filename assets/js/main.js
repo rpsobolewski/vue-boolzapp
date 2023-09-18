@@ -197,5 +197,12 @@ createApp({
         }, 1000);
       }
     },
+    getHourAndMinute(dateString) {
+      const date = new Date(dateString);
+      const hour = date.getHours();
+      const minute = date.getMinutes();
+      const messageTime = hour + ":" + minute;
+      return messageTime;
+    },
   },
 }).mount("#app");

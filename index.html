@@ -88,6 +88,7 @@
                         <div :class="message.status"
                             v-for="message in contacts[activeContact].messages">
                             {{ message.message }}
+                            <span class="message-date">{{ message.date }}</span>
                         </div>
 
                     </div>
@@ -96,8 +97,8 @@
                         <div class="emoji">
                             <i class="fa-solid fa-smile    "></i>
                         </div>
-                        <input v-model="newMessage" type="text">
-                        <button @click="sendMessage">Send</button>
+                        <input v-model="newMessage" type="text"
+                            @keydown.enter="sendMessage">
 
                         <div class="mic">
                             <i class="fa-solid fa-microphone"></i>

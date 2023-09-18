@@ -207,6 +207,7 @@ body {
     border-radius: 0.5rem;
     margin: 0.5rem;
     max-width: 200px;
+    position: relative;
 }
 
 .received {
@@ -218,6 +219,18 @@ body {
     align-self: flex-end;
     background-color: var(--bz-green);
 
+}
+
+.message-date {
+    
+    bottom: 5px;
+    /* Adjust the distance from the bottom as needed */
+    right: 5px;
+    /* Adjust the distance from the right as needed */
+    font-size: 0.8rem;
+    /* Adjust the font size as needed */
+    color: #999;
+    /* Adjust the color as needed */
 }
 
 

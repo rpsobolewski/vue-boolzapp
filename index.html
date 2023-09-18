@@ -71,10 +71,10 @@
                         <div class="contact_details">
                             <div class="avatar">
                                 <img
-                                    :src="`./assets/img/avatar${me.avatar}.jpg`"
+                                    :src="`./assets/img/avatar${contacts[activeContact].avatar}.jpg`"
                                     alt>
                             </div>
-                            <div class="name">{{me.name}}</div>
+                            <div class="name">{{contacts[activeContact].name}}</div>
                         </div>
                         <div class="actions">
                             <i class="fa-solid fa-circle-notch fa-lg fa-fw"></i>

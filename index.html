@@ -96,7 +96,9 @@
                         <div class="emoji">
                             <i class="fa-solid fa-smile    "></i>
                         </div>
-                        <input type="text">
+                        <input v-model="newMessage" type="text">
+                        <button @click="sendMessage">Send</button>
+
                         <div class="mic">
                             <i class="fa-solid fa-microphone"></i>
                         </div>

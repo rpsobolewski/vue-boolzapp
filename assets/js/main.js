@@ -2,6 +2,7 @@ const { createApp } = Vue;
 createApp({
   data() {
     return {
+      newMessage: "",
       me: {
         avatar: "_io",
         name: "Sofia",
@@ -171,5 +172,21 @@ createApp({
         },
       ],
     };
+  },
+  methods: {
+    sendMessage() {
+      if (this.newMessage.length !== 0) {
+        const activeContact = this.contacts[this.activeContact];
+        const currentDate = new Date().toLocaleString();
+
+        activeContact.messages.push({
+          date: currentDate,
+          message: this.newMessage,
+          status: "sent",
+        });
+
+        this.newMessage = "";
+      }
+    },
   },
 }).mount("#app");

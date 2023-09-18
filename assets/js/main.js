@@ -3,6 +3,7 @@ createApp({
   data() {
     return {
       newMessage: "",
+
       me: {
         avatar: "_io",
         name: "Sofia",
@@ -173,6 +174,7 @@ createApp({
       ],
     };
   },
+
   methods: {
     sendMessage(event) {
       if (event.keyCode === 13 && this.newMessage.length !== 0) {
@@ -186,6 +188,13 @@ createApp({
         });
 
         this.newMessage = "";
+        setTimeout(() => {
+          activeContact.messages.push({
+            date: currentDate,
+            message: "ok",
+            status: "received",
+          });
+        }, 1000);
       }
     },
   },

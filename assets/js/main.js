@@ -3,7 +3,7 @@ createApp({
   data() {
     return {
       newMessage: "",
-
+      searchText: "",
       me: {
         avatar: "_io",
         name: "Sofia",
@@ -203,6 +203,13 @@ createApp({
       const minute = date.getMinutes();
       const messageTime = hour + ":" + minute;
       return messageTime;
+    },
+    filterContacts() {
+      const searchTerm = this.searchText.toLowerCase();
+      this.contacts.forEach((contact) => {
+        const contactName = contact.name.toLowerCase();
+        contact.isVisible = contactName.includes(searchTerm);
+      });
     },
   },
 }).mount("#app");

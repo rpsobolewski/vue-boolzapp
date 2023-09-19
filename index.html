@@ -44,13 +44,20 @@
                         </div>
                     </div>
                     <!-- /.notifications -->
-                    <div class="searcharea"></div>
+                    <div class="searcharea">
+                        <input v-model="searchText" type="text"
+                            placeholder="Cerca un contatto"
+                            @input="filterContacts">
+
+                    </div>
+
                     <!-- /.searcharea -->
                     <div class="contacts">
                         <div class="contact"
-                            :class="index === activeContact ? 'active' : ''"
                             v-for="(contact, index) in contacts"
-                            @click="activeContact= index">
+                            :class="index === activeContact ? 'active' : ''"
+                            @click="activeContact = index"
+                            v-show="contact.isVisible">
                             <div class="avatar">
                                 <img
                                     :src="`./assets/img/avatar${contact.avatar}.jpg`"
@@ -111,8 +118,6 @@
             </div>
         </div>
         <!-- Development only cdn, disable in production -->
-        <script
-            src="https://cdnjs.cloudflare.com/ajax/libs/luxon/2.0.2/luxon.min.js"></script>
 
         <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
         <script src='./assets/js/main.js'></script>
